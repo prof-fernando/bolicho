@@ -18,6 +18,7 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
  * </p>
  *
  */
+
 public class Bolicho extends JFrame {
 
 	public Bolicho() {
@@ -28,14 +29,12 @@ public class Bolicho extends JFrame {
 		desenhaComponentes();
 		// muda a aparencia da aplicação JAVA
 		try {
-			UIManager.setLookAndFeel( new NimbusLookAndFeel() );
+			UIManager.setLookAndFeel(new NimbusLookAndFeel());
 		} catch (UnsupportedLookAndFeelException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
+
 		setVisible(true);
 	}
 
@@ -57,7 +56,7 @@ public class Bolicho extends JFrame {
 		cliente.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(Bolicho.this, "Voce clicou!!! ");
+				new FrmCliente(Bolicho.this);
 			}
 		});
 
