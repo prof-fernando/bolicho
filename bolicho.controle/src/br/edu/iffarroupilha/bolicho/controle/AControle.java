@@ -26,4 +26,33 @@ public abstract class AControle {
 
 	}
 
+	/**
+	 * <p>
+	 * Converte um termo em numero, caso esteja em formato invpalido retorna-se
+	 * zero
+	 * </p>
+	 */
+	public int converteInteiro(String termo) {
+		try {
+			return Integer.parseInt(termo);
+		} catch (Exception e) {
+			return 0;
+		}
+	}
+
+	/**
+	 * <p>
+	 * Converte um termo em numero com casas decimais,
+	 *  caso esteja em formato invpalido retorna-se
+	 * zero
+	 * </p>
+	 */
+	public float converteFlutuante(String termo) {
+		try {
+			return Float.parseFloat(termo);
+		} catch (Exception e) {
+			return 0;
+		}
+	}
+
 }

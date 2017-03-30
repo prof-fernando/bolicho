@@ -1,11 +1,17 @@
 package br.edu.iffarroupilha.bolicho.visao.desktop;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+
+import br.edu.iffarroupilha.bolicho.controle.ProdutoControle;
+import br.edu.iffarroupilha.bolicho.modelo.Produto;
 
 /**
  * <p>
@@ -33,6 +39,34 @@ public class FrmProduto  extends JFrame {
 		JButton btnGravar = new JButton("Gravar");
 		
 		setLayout(new FlowLayout());
+		
+		btnGravar.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				ProdutoControle controle = new ProdutoControle();
+				// pegar os dados da tela
+				Produto c = new Produto();
+				c.setDescricao(jtfDescricao.getText());
+				// converte para um valor flutuante
+				float valor = controle.converteFlutuante(jtfPreco.getText());
+
+				c.setPreco(valor);
+
+				// valida os dados
+				String erro = controle.validarProduto(c);
+				if (erro == null) {
+					// nenhum erro criado
+					// realiza a gravacao
+					controle.gravar(c);
+					JOptionPane.showMessageDialog(null, "Gravado!");
+				} else {
+					JOptionPane.showMessageDialog(null, erro, "Validação",
+							JOptionPane.WARNING_MESSAGE);
+				}
+			}
+		});
+
+		
 		
 		// adiciona em tela
 		add(jblDescricao);
