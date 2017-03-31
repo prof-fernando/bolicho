@@ -2,6 +2,10 @@ package br.edu.iffarroupilha.bolicho.controle;
 
 import java.util.List;
 
+import org.hibernate.Session;
+
+import br.edu.iffarroupilha.bolicho.modelo.dao.HibernateDAO;
+
 /**
  * <p>
  * controlador genérico que agrupa as funções comuns de lógicas, como gravar,
@@ -12,7 +16,16 @@ public abstract class AControle {
 	// gravar ou atualizar uma informação
 	// em banco
 	public void gravar(Object entidade) {
-
+		// estabele a conexao
+		Session sessao = HibernateDAO.getSessao();
+		// abre uma transacao
+		sessao.getTransaction().begin();
+		// salva no banco
+		sessao.saveOrUpdate(entidade);
+		// comita as alterações
+		sessao.getTransaction().commit();
+		
+		
 	}
 
 	// busca todos os registros de uma
