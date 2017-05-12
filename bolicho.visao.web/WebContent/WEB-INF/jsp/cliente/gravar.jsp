@@ -5,8 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"
+href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
+
 </head>
 <body>
-<h2> Item gravado com sucesso!!! </h2>
+<h2 class="alert alert-info"> Item gravado com sucesso!!! </h2>
+<div class="text-center" >
+   <a class=" btn btn-default"  href="listar">
+    <span class="glyphicon glyphicon-arrow-left"></span>
+      Voltar</a>
+</div>
 </body>
 </html>

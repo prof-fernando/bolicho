@@ -24,15 +24,13 @@ public class ClienteController {
 		result.include("clientes", itens);
 	}
 	
-	public void gravar(){
-		// objeto temporario
-		Cliente c = new Cliente();
-		c.setNome("Jose");
-		c.setCpf(123);
+	// carrega a visao para adicionar um item 
+	public void cadastrar(){
 		
-		controle.gravar( c  );
-		
-		
+	}
+	
+	public void gravar(Cliente cliente){
+		controle.gravar( cliente  );
 	}
 	
 }

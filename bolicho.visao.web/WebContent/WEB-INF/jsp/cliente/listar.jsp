@@ -8,6 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Clientes</title>
+<link rel="stylesheet"
+href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
 </head>
 <body>
 <h2> Listagem de clientes</h2>
@@ -25,7 +27,10 @@
    
 </table>
    
-
+<a class="btn btn-primary" href="cadastrar">
+  <span class="glyphicon glyphicon-plus"></span>
+  Adicionar
+</a>
 
 </body>
 
