@@ -10,28 +10,63 @@
 <title>Clientes</title>
 <link rel="stylesheet"
 href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="http://localhost:8080/bolicho.visao.web/css/jquery.dataTables.min.css">
+
+
+<script 
+src="http://localhost:8080/bolicho.visao.web/js/jquery-3.2.1.min.js">
+</script>	
+
+<script 
+src="http://localhost:8080/bolicho.visao.web/js/jquery.dataTables.min.js">
+</script>	
+
+<script type="text/javascript">
+   $(function(){
+	   
+	   $('table').dataTable({
+	        "language": {
+	            "lengthMenu": "Mostrando _MENU_ registros por página",
+	            "zeroRecords": "Nenhuma ocorrencia",
+	            "info": "pág _PAGE_ de _PAGES_",
+	            "infoEmpty": "Sem registros",
+	            "infoFiltered": "(duscando de _MAX_ registros)",
+	            "search" : "buscar"
+	        }
+	    });
+   })
+
+</script>
+
+
 </head>
 <body>
-<h2> Listagem de clientes</h2>
-<table>
-   <tr>
-      <th> CPF </th>
-      <th> Nome </th>
-   </tr>
-   <c:forEach items="${clientes}" var="cli" >
-     <tr>
-        <td> ${cli.cpf } </td>
-        <td> ${cli.nome } </td>
-     </tr>
-   </c:forEach>
-   
-</table>
-   
-<a class="btn btn-primary" href="cadastrar">
-  <span class="glyphicon glyphicon-plus"></span>
-  Adicionar
-</a>
-
+<div class="container">
+	<h2> Listagem de clientes</h2>
+	<table>
+	  <thead>
+		   <tr>
+		      <th> CPF </th>
+		      <th> Nome </th>
+		   </tr>
+	   </thead>   
+	   <tbody>
+		   <c:forEach items="${clientes}" var="cli" >
+		     <tr>
+		        <td> ${cli.cpf } </td>
+		        <td> ${cli.nome } </td>
+		     </tr>
+		   </c:forEach>
+	   </tbody>
+	</table>
+	   
+	<a class="btn btn-primary" href="cadastrar">
+	  <span class="glyphicon glyphicon-plus"></span>
+	  Adicionar
+	</a>
+</div>
 </body>
 
 </html>

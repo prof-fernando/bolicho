@@ -10,25 +10,25 @@ href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
 
 </head>
 <body>
-<h2> Cadastro de cliente </h2>
-
-<form action="gravar"  >
-	<div class="form-group">
-		<label for="txtCPF">CPF:</label>
-		<input type="text" name="cliente.cpf" id="txtCPF"
-	   	class="form-control" >
-	</div>
-	
-	<div class="form-group">
-		<label for="txtNome">Nome:</label>
-		<input type="text" name="cliente.nome" id="txtNome"
-		class="form-control" >
-	</div>
-	<div class="form-group">
-		<input type="submit" class="btn btn-success" value="gravar" >
-	</div>
-</form>
-
+<div class="container">
+	<h2> Cadastro de cliente </h2>
+	<form action="gravar"  >
+		<div class="form-group">
+			<label for="txtCPF">CPF:</label>
+			<input type="text" name="cliente.cpf" id="txtCPF"
+		   	class="form-control" >
+		</div>
+		
+		<div class="form-group">
+			<label for="txtNome">Nome:</label>
+			<input type="text" name="cliente.nome" id="txtNome"
+			class="form-control" >
+		</div>
+		<div class="form-group">
+			<input type="submit" class="btn btn-success" value="gravar" >
+		</div>
+	</form>
+</div>
 
 </body>
 </html>

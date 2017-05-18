@@ -10,11 +10,13 @@ href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
 
 </head>
 <body>
-<h2 class="alert alert-info"> Item gravado com sucesso!!! </h2>
-<div class="text-center" >
-   <a class=" btn btn-default"  href="listar">
-    <span class="glyphicon glyphicon-arrow-left"></span>
-      Voltar</a>
+<div class="container" >
+	<h2 class="alert alert-info"> Item gravado com sucesso!!! </h2>
+	<div class="text-center" >
+	   <a class=" btn btn-default"  href="listar">
+	    <span class="glyphicon glyphicon-arrow-left"></span>
+	      Voltar</a>
+	</div>
 </div>
 </body>
 </html>
