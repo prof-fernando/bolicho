@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet"
-href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
+
+<jsp:include page="../../../importacoes.jsp"/>
 
 </head>
 <body>

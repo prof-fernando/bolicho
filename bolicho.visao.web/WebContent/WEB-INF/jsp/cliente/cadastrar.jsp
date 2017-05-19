@@ -5,9 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cadastro cliente</title>
-<link rel="stylesheet"
-href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
 
+<jsp:include page="../../../importacoes.jsp"/>
+
+ <script type="text/javascript" >
+ 	$(function(){
+ 		$('#txtCPF').number(true,0,"","");
+ 	})
+ 
+ 
+ </script>
+ 
 </head>
 <body>
 <div class="container">
@@ -16,13 +24,13 @@ href="http://localhost:8080/bolicho.visao.web/css/bootstrap.min.css">
 		<div class="form-group">
 			<label for="txtCPF">CPF:</label>
 			<input type="text" name="cliente.cpf" id="txtCPF"
-		   	class="form-control" >
+		   	class="form-control"   required >
 		</div>
 		
 		<div class="form-group">
 			<label for="txtNome">Nome:</label>
 			<input type="text" name="cliente.nome" id="txtNome"
-			class="form-control" >
+			class="form-control" required >
 		</div>
 		<div class="form-group">
 			<input type="submit" class="btn btn-success" value="gravar" >
